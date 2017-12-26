@@ -1,0 +1,273 @@
+.rules {
+  margin-top: 50px;
+  padding-bottom: 20px;
+  padding-right: 10px;
+  background-color: #344975;
+  color: white;
+  text-align: left;
+  padding-left: 20px;
+}
+
+.rules h2 {
+  font-size: 33px;
+}
+
+.rules p {
+  font-size: 19px;
+}
+
+.rules a {
+  color: white;
+  font-weight: bold;
+  font-size: 17px;
+}
+
+.rules a:hover, a:focus {
+  color: grey;
+  text-decoration: none;
+}
+
+.buttons {
+  margin-bottom: 20px;
+}
+
+.btn {
+  background: #3498db;
+  background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+  background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+  background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+  background-image: -o-linear-gradient(top, #3498db, #2980b9);
+  background-image: linear-gradient(to bottom, #3498db, #2980b9);
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: #3cb0fd;
+  background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+  text-decoration: none;
+}
+
+.grey-btn {
+  background: grey;
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+.grey-btn:hover {
+  text-decoration: none;
+  color: white;
+}
+
+.panel {
+  margin: 20px;
+  font-size: 40px;
+  background-color: lightgray;
+  border: 2px solid black;
+}
+
+
+.info {
+  font-size: 31px;
+  margin: 10px;
+  margin-bottom: 31px;
+  height: 90px;
+  width: 200px;
+  display: inline-block;
+  background-color: green;
+  border-radius: 10px;
+}
+
+.warn {
+  position: relative;
+  top: 5px;
+  font-size: 33px;
+  margin: 10px;
+  margin-bottom: 31px;
+  height: 90px;
+  width: 200px;
+  display: inline-block;
+  background-color: red;
+  border-radius: 10px;
+}
+
+.warn-text {
+  font-size: 27px;
+}
+
+.jackpot {
+  margin-bottom: 30px;
+  font-size: 40px;
+  height: 160px;
+  display: inline-block;
+  /* background-color: #e5eefc; */
+  background-color: #afceff;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.crown-address {
+  text-align: left;
+  position: relative;
+  top: 10px; left: -60px;
+}
+
+.user-address {
+  text-align: right;
+  position: relative;
+  left: 60px;
+}
+
+.address-bar {
+  height: 55px;
+  background: #344975;
+  color: white;
+  padding-top: 10px;
+  
+  font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 15px;
+  letter-spacing: .04em;
+  font-weight: bold;
+  line-height: 100%;
+  /* position: sticky;
+  top: 0px; */
+
+}
+
+.header a:hover {
+  color: black;
+  outline: 0;
+  text-decoration: none;
+}
+
+.navbar-right {
+  color: grey;
+  font-size: 20px;
+  margin-right: -54px;
+  margin-top: -24px;
+  padding-bottom: 20px;
+}
+
+.CrownApp {
+  background-color: #fafbfc;
+  text-align: center;
+}
+
+.CrownApp h1 {
+  font-size: 50px;
+  margin-bottom: 30px;
+}
+
+.header {
+  text-align: left;
+  margin-left: 5px;
+  margin-top: 10px;
+}
+
+.logo {
+  position: relative;
+  left: -27px;
+  padding-right: 12px;
+  /* border-right: 1px solid #5cb6e4; */
+  height: 30px;
+}
+
+.contracts {
+  display: inline-block;
+  height: 50px;
+  vertical-align: middle;
+}
+
+.contracts h3 {
+  font-size: 20px;
+  margin: 5px 0 0;
+}
+
+.contracts h4 {
+  font-size: 20px;
+  margin: 5px 0 0;
+}
+
+.contracts a {
+  color: #004569;
+}
+
+.contracts span {
+  color: #333;
+  font-size: 11px;
+}
+
+.details {
+  position: relative;
+  top: 10px; left: -60px;
+}
+
+.details a {
+  cursor: pointer;
+}
+
+.details div {
+  display: inline-block;
+  background-color: #afceff;
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 20px;
+  margin: 10px;
+}
+
+.warning {
+  position: relative;
+}
+
+.warning-message {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  margin-top: 50px;
+
+  font-size: 16px;
+  text-align: center;
+}
+
+.action {
+  position: absolute;
+  right: 30px;
+}
+
+.spinner {
+  position: absolute;
+  width: 100%;
+  height: 115%;
+  padding-top: 200px;
+
+  background: rgba(255, 255, 255, .5);
+  z-index: 1;
+}
+
+.spinner img {
+  height: 50px;
+}
+
+.emoji {
+  vertical-align: middle;
+}
+
+th {
+  min-width: 155px;
+}
