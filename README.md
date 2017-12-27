@@ -6,33 +6,33 @@ Pwn the Crown is a game inspired in the [King of Ether](https://www.kingoftheeth
 
 ## Try it at home
 
-### 1. Connect to the network
-  Install [Metamask](https://metamask.io/), select the network you want to connect to and unlock your account.
-  
-  Optionally, you could deploy your own contract on a testing network. I suggest [testrpc](https://www.npmjs.com/package/ethereumjs-testrpc):
-  ```
-  $ npm install -g ethereumjs-testrpc
-  $ testrpc
-  ```
-### 2. Get the source code
+### 1. Get the source code
   ```
   $ git clone git@github.com:azavalla/pwn-the-crown.git
   ```
 
-### 3. Install the dependencies
+### 2. Install the dependencies
   ```
   $ cd pwn-the-crown
   $ npm install
   ```
 
+### 3. Connect to the network
+  Install [Metamask](https://metamask.io/), select the network you want to connect to and unlock your account.
+
+  Optionally, you could run your own testing network. Pwn the Crown comes with [ganache-cli](https://github.com/trufflesuite/ganache-cli):
+  ```
+  $ npx ganache-cli
+  ```
+
 ### 4. Compile the contracts
   Using the [Truffle](http://truffleframework.com/) CLI:
   ```
-  $ truffle compile
+  $ npx truffle compile
   ```
-  If you chose to deploy your own contract, now is when you do it.
+  If you are runnign your own network, deploy the contract and save it's address, you'll need it later.
   ```
-  $ truffle migrate
+  $ npx truffle migrate
   ```
 
 ### 5. Start the web server
