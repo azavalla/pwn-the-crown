@@ -24,7 +24,7 @@ contract Crown is Heritable(12 hours) {
         selfdestruct(owner);
     }
 
-    function claimCrown() external payable {
+    function claimCrown() public payable {
         require(msg.sender != owner);
         require(msg.sender != heir);
         require(msg.value >= lastBid + lastBid * 10/100);
@@ -37,13 +37,13 @@ contract Crown is Heritable(12 hours) {
         heartbeat();
     }
 
-    function heirClaimCrown() external payable onlyHeir {
+    function heirClaimCrown() public payable onlyHeir {
         require(ownerLives());
         require(msg.value >= lastRoyalBid + lastRoyalBid * 10/100);
         proclaimDeath();
     }
 
-    function kingDefendCrown() external payable onlyOwner {
+    function kingDefendCrown() public payable onlyOwner {
         require(!ownerLives());
         require(msg.value >= lastRoyalBid + lastRoyalBid * 10/100);
         heartbeat();
