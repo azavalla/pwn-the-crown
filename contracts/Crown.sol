@@ -34,19 +34,19 @@ contract Crown is Heritable(12 hours) {
         owner = msg.sender;
         lastBid = msg.value;
         currentKingRulingStartDate = now;
-        heartbeat();
+        super.heartbeat();
     }
 
     function heirClaimCrown() public payable onlyHeir {
         require(ownerLives());
         require(msg.value >= lastRoyalBid + lastRoyalBid * 10/100);
-        proclaimDeath();
+        super.proclaimDeath();
     }
 
     function kingDefendCrown() public payable onlyOwner {
         require(!ownerLives());
         require(msg.value >= lastRoyalBid + lastRoyalBid * 10/100);
-        heartbeat();
+        super.heartbeat();
     }
 
     function kingIsInDanger() public view returns (bool) {
@@ -62,7 +62,17 @@ contract Crown is Heritable(12 hours) {
         return now - currentKingRulingStartDate >= 10 days;
     }
 
+
+    //
     // NO-OPs
-    // what is the best way to no-op an inherited method?
+    //
+
+    // Disallow owner to setHeir, so they cannot set themselves.
     function setHeir(address) public {}
+    function removeHeir() public {}
+    // We dont want the heir to be able to circumvent heirClaimCrown() and call
+    // Heritable:proclaimDeath() directly.
+    function proclaimDeath() public {}
+    // Same here. We dont want the owner to be able to call Heritable.hearbeat().
+    function heartbeat() public {}
 }
