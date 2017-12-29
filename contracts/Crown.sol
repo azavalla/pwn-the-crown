@@ -1,7 +1,7 @@
 pragma solidity ^0.4.11;
 
 
-import "./Heritable.sol";
+import 'zeppelin-solidity/contracts/ownership/Heritable.sol';
 
 
 contract Crown is Heritable(12 hours) {
@@ -11,6 +11,8 @@ contract Crown is Heritable(12 hours) {
 
 
     function Crown() public payable {
+        require(msg.value >= 0.1 ether);
+
         // Bidding starts at 0.1 ether
         lastBid = 0.1 ether;
         lastRoyalBid = 0.1 ether;
@@ -69,10 +71,14 @@ contract Crown is Heritable(12 hours) {
 
     // Disallow owner to setHeir, so they cannot set themselves.
     function setHeir(address) public {}
+
+    // Likewise, disallow owner to removeHeir, so they cannot avoid having a hostile heir.
     function removeHeir() public {}
+
     // We dont want the heir to be able to circumvent heirClaimCrown() and call
     // Heritable:proclaimDeath() directly.
     function proclaimDeath() public {}
+
     // Same here. We dont want the owner to be able to call Heritable.hearbeat().
     function heartbeat() public {}
 }
