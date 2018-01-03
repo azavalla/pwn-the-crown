@@ -127,7 +127,7 @@ class Panel extends Component {
 
     try {
       this.startLoader()
-      await crown.kingDefendCrown({ from: accounts[0], gas: 30000, value: nextBid})
+      await crown.kingDefendCrown({ from: accounts[0], gas: 40000, value: nextBid})
       this.props.getData()
     } catch (e) {
       this.stopLoader()
@@ -143,7 +143,7 @@ class Panel extends Component {
     
     try {
       this.startLoader()
-      await crown.heirClaimCrown({ from: accounts[0], gas: 45809, value: nextBid })
+      await crown.heirAttackCrown({ from: accounts[0], gas: 56809, value: nextBid })
       this.props.getData()
     } catch (e) {
       this.stopLoader()
