@@ -29,7 +29,7 @@
   "scripts": {
     "start": "require-link && react-scripts start",
     "build": "require-link && react-scripts build",
-    "test": "require-link && react-scripts test --env=jsdom",
+    "test": "npx truffle test",
     "eject": "react-scripts eject"
   },
   "requireSymlinks": {
