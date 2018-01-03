@@ -90,7 +90,7 @@ class CrownApp extends Component {
     const timeOfDeath = await crown.timeOfDeath()
     const heartbeatTimeout = await crown.heartbeatTimeout()
     const now = Math.round(new Date() / 1000)
-    return timeOfDeath != 0 && now >= Number(timeOfDeath.plus(heartbeatTimeout))
+    return Number(timeOfDeath) !== 0 && now >= Number(timeOfDeath.plus(heartbeatTimeout))
   }
 }
 
