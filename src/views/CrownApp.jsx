@@ -86,6 +86,7 @@ class CrownApp extends Component {
       loading: false
     })
   }
+  
   async heirCanClaimThrone(crown) {
     const timeOfDeath = await crown.timeOfDeath()
     const heartbeatTimeout = await crown.heartbeatTimeout()

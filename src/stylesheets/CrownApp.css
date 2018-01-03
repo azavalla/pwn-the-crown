@@ -245,15 +245,10 @@
   text-align: center;
 }
 
-.action {
-  position: absolute;
-  right: 30px;
-}
-
 .spinner {
   position: absolute;
   width: 100%;
-  height: 115%;
+  height: 192%;
   padding-top: 200px;
 
   background: rgba(255, 255, 255, .5);
@@ -261,11 +256,21 @@
 }
 
 .spinner img {
-  height: 50px;
+  height: 70px;
 }
 
-.emoji {
-  vertical-align: middle;
+.metamask-warning {
+  font-weight: bold;
+  text-align: center;
+  color: black;
+  font-size: 40px;
+  position: absolute;
+  width: 100%;
+  height: 192%;
+  margin-top: 0px;
+  padding-top: 70px;
+  background: rgba(255, 255, 255, .5);
+  z-index: 1;
 }
 
 th {
