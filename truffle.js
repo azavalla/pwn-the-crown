@@ -1,5 +1,8 @@
-// Allows us to use ES6 in our migrations and tests.
-require('babel-register')
+// Allows ES6 in OZ npm module.
+require('babel-register')({
+  ignore: /node_modules\/(?!zeppelin-solidity)/
+});
+require('babel-polyfill')
 var Web3 = require('web3')
 
 module.exports = {
