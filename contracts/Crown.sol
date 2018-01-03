@@ -9,7 +9,6 @@ contract Crown is Heritable(12 hours) {
     uint public lastRoyalBid;
     uint public currentKingRulingStartDate;
 
-
     function Crown() public payable {
         require(msg.value >= 0.1 ether);
 
@@ -39,15 +38,17 @@ contract Crown is Heritable(12 hours) {
         super.heartbeat();
     }
 
-    function heirClaimCrown() public payable onlyHeir {
+    function heirAttackCrown() public payable onlyHeir {
         require(ownerLives());
         require(msg.value >= lastRoyalBid + lastRoyalBid * 10/100);
+        lastRoyalBid = msg.value;
         super.proclaimDeath();
     }
 
     function kingDefendCrown() public payable onlyOwner {
         require(!ownerLives());
         require(msg.value >= lastRoyalBid + lastRoyalBid * 10/100);
+        lastRoyalBid = msg.value;
         super.heartbeat();
     }
 
@@ -75,7 +76,7 @@ contract Crown is Heritable(12 hours) {
     // Likewise, disallow owner to removeHeir, so they cannot avoid having a hostile heir.
     function removeHeir() public {}
 
-    // We dont want the heir to be able to circumvent heirClaimCrown() and call
+    // We dont want the heir to be able to circumvent heirAttackCrown() and call
     // Heritable:proclaimDeath() directly.
     function proclaimDeath() public {}
 
